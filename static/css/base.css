@@ -1,0 +1,8 @@
+/* Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+/* Local font import */ 
+@font-face {
+    font-family: Mikela;
+    src: url('../fonts/Mikela.otf') format('opentype');
+}
