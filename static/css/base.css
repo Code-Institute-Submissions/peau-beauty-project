@@ -43,3 +43,29 @@ p {
     letter-spacing: 5px;
     padding-left: 0.5rem;
 }
+
+.small {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+}
+
+/* Search bar */
+
+#search-input {
+    position: absolute; 
+    will-change: transform; 
+    top: 0px; 
+    left: 0px; 
+    transform: translate3d(0px, 46px, 0px)!important;
+}
+
+.search-bar::placeholder {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Icons */
+
+.navigation-icons {
+    color: #036d03;
+    font-size: 1.7rem;
+}
