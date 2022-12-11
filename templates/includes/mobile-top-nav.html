@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-12 text-center d-block d-md-none">
+        <li class="list-inline-item">
+            <!-- Logo -->
+            <div class="navbar d-block d-md-none">
+                <a href="{% url 'home' %}" id="logo">peau</a>
+            </div>
+        </li>
+    </div>
+</div>
+<div c
+lass="row">
+    <div class="col-12 d-flex justify-content-center pl-3 pr-3">
+        <li class="list-inline-item dropdown pr-3">
+            <!-- Favorites -->
+            <a class="text-black d-block d-md-none pt-1" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div>
+                        <i class="fa-regular fa-heart navigation-icons-mobile"></i>
+                    </div>
+                    <p class="my-0 small">Favorites</p>
+                </div>
+            </a>
+        </li>
+        <li class="list-inline-item dropdown pr-3">
+            <!-- Account -->
+            <a class="text-black d-block d-md-none pt-1" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div>
+                        <i class="fa-regular fa-circle-user navigation-icons-mobile"></i>
+                    </div>
+                    <p class="my-0 small">Account</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <a href="" class="dropdown-item medium">Product Management</a>
+                    {% endif %}
+                    <a href="" class="dropdown-item medium">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item medium">Logout</a>
+                {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item medium">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item medium">Login</a>
+                {% endif %}
+            </div>
+        </li>
+        <li class="list-inline-item pr-3">
+            <!-- Shopping bag -->
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} d-block d-md-none pt-1 mobile-nav-item" href="">
+                <div class="text-center">
+                    <div>
+                        <i class="fa-solid fa-bag-shopping navigation-icons-mobile"></i>
+                    </div>
+                    <p class="my-0 small">
+                        {% if grand_total %}
+                            ${{ grand_total|floatformat:2 }}
+                        {% else %}
+                            $0.00
+                        {% endif %}
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li class="list-inline-item pr-3">
+            <a class="d-block d-md-none pt-1" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fas fa-search navigation-icons-mobile"></i></div>
+                    <p class="small">Search</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" id="search-input" aria-labelledby="mobile-search">
+                <form class="form" method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="What are you looking for?">
+                        <div class="input-group-append">
+                            <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search" style="color: #036d03;"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+        <li class="list-inline-item">
+            <div class="d-block d-md-none pt-2">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars navigation-icons"></i>
+                </button>
+            </div>
+        </li>
+    </div>
+</div>
