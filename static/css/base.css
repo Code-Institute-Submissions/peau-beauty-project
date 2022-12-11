@@ -49,6 +49,11 @@ p {
     font-size: 0.75rem;
 }
 
+.medium {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
 /* Search bar */
 
 #search-input {
@@ -70,10 +75,48 @@ p {
     font-size: 1.7rem;
 }
 
+.navigation-icons-mobile {
+    color: #036d03;
+    font-size: 1.1rem;
+}
+
+/* Nav Links */
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    cursor: pointer !important;
+}
+
+.nav-links {
+    color: #036d03;
+    font-family: 'Mikela', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.nav-links:hover, 
+#logo:hover {
+    color: #036d03;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    border: 1px solid #036d03;
+    text-align: center !important;
+    position: inherit !important;
+    transform: none !important;
+    padding-bottom: 1.2rem;
+    min-width: none !important;
+    
+}
 
 /* Allauth */
-
-/* Sign-up */
 
 .block-hr-divider {
     width: 70%;
