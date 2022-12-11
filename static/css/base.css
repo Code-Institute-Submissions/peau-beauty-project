@@ -69,3 +69,51 @@ p {
     color: #036d03;
     font-size: 1.7rem;
 }
+
+
+/* Allauth */
+
+/* Sign-up */
+
+.block-hr-divider {
+    width: 70%;
+}
+
+.allauth-container {
+    background-color: white;
+    text-align: center;
+    margin-top: 150px;
+    padding: 2rem 3rem;
+    width: auto;
+}
+
+.allauth-container label {
+    display: block;
+}
+
+.allauth-container a {
+    color: #036d03;
+}
+
+.allauth-form input {
+    border: 1px solid black;
+    border-radius: 0;
+    padding: 0.5rem;
+    width: 275px;
+}
+
+.allauth-btn {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0%;
+    color: #036d03;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    box-shadow: 1px 2px 0px black;
+}
+
+.allauth-btn:hover {
+    box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24), 0 15px 30px 0 rgba(0,0,0,0.19);
+}
