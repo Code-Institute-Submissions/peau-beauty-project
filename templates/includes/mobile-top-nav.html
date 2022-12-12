@@ -32,7 +32,7 @@ lass="row">
                     <p class="my-0 small">Account</p>
                 </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0" aria-labelledby="user-options" id="account">
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                         <a href="" class="dropdown-item medium">Product Management</a>

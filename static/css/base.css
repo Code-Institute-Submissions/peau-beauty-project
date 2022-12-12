@@ -7,6 +7,19 @@
     src: url('../fonts/Mikela.otf') format('opentype');
 }
 
+/* Site structure */
+
+html {
+    width: 100%
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* Fontstyling for Logo, Headings and Paragraphs */
 h1, 
 h2 {
@@ -56,12 +69,8 @@ p {
 
 /* Search bar */
 
-#search-input {
-    position: absolute; 
-    will-change: transform; 
-    top: 0px; 
-    left: 0px; 
-    transform: translate3d(0px, 46px, 0px)!important;
+#search-input.show {
+    display: block;
 }
 
 .search-bar::placeholder {
@@ -105,16 +114,7 @@ a:hover {
     cursor: pointer;
     text-decoration: none;
 }
-
-.dropdown-menu {
-    border: 1px solid #036d03;
-    text-align: center !important;
-    position: inherit !important;
-    transform: none !important;
-    padding-bottom: 1.2rem;
-    min-width: none !important;
-    
-}
+ 
 
 /* Allauth */
 
